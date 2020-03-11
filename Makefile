@@ -78,14 +78,10 @@ watch-js:
 	npm run watch
 
 # Testing
-test:
-	npm run test
+test: test-api
 
-test-watch:
-	npm run test:watch
-
-test-coverage:
-	npm run test:coverage
+test-api:
+	phpunit --bootstrap vendor/autoload.php --testdox tests/api/
 
 
 # Linting
